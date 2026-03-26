@@ -218,11 +218,3 @@ visualizer.generate_all_plots()
 ## 许可证
 
 本项目仅供学习和研究使用。
-
-## 作者
-
-AI Assistant
-
-## 更新日期
-
-2026-03-26
