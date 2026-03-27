@@ -1,0 +1,489 @@
+2026-03-27 10:18:13,175 - DatabaseManager - INFO - 数据库连接已初始化: sqlite
+2026-03-27 10:18:13,205 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:13,247 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:14,832 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:14,854 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:14,858 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:16,543 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:16,558 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:16,562 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:18,325 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:18,363 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:18,371 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:19,842 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:19,859 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:19,862 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:21,225 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:21,239 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:21,244 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:22,606 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:22,621 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:23,603 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:23,619 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:23,625 - ClassDAO - ERROR - 创建ClassInfo失败: (sqlite3.OperationalError) no such table: class_info
+[SQL: INSERT INTO class_info (grade, class_number, class_name, student_count, created_at, updated_at) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('一年级', 1, '一年级1班', 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:24,997 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:25,015 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:25,018 - ClassDAO - ERROR - 创建ClassInfo失败: (sqlite3.OperationalError) no such table: class_info
+[SQL: INSERT INTO class_info (grade, class_number, class_name, student_count, created_at, updated_at) VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('一年级', 1, '一年级1班', 0)]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:26,455 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:26,471 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:26,476 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:27,834 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:27,850 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:27,855 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:29,446 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:29,503 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:18:29,529 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:18:29,530 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:18:29,555 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:29,560 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:30,967 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:30,982 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:30,987 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:32,352 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:32,369 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:32,373 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:33,856 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:33,873 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:33,877 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:35,272 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:18:35,287 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:18:35,292 - StudentDAO - ERROR - 创建Student失败: (sqlite3.OperationalError) no such table: students
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202400001', '张三', '男', '一年级', 7, 120.5, 22.0, 15.1, '正常', None, '2024-09-01')]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:18:36,682 - DatabaseManager - INFO - 数据库表已删除
+2026-03-27 10:32:00,609 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:32:13,554 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:32:13,737 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:16,385 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:19,461 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:21,975 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:24,618 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:27,222 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:31,763 - ClassDAO - ERROR - 创建ClassInfo失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:34,082 - ClassDAO - ERROR - 创建ClassInfo失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:36,574 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:39,925 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:42,506 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:32:42,530 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:32:42,531 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:32:42,562 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:45,086 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:47,954 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:51,286 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:32:54,487 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:33:57,020 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:33:57,173 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:33:59,874 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:02,314 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:04,467 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:06,951 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:10,977 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:16,533 - ClassDAO - ERROR - 创建ClassInfo失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:19,670 - ClassDAO - ERROR - 创建ClassInfo失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:23,025 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:26,151 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:34:29,540 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:34:29,576 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:34:29,577 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:34:32,743 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:36:44,168 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:36:44,717 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:36:44,741 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:36:44,742 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:36:45,015 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:37:35,449 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:37:36,106 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:37:36,134 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:37:36,135 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:37:36,416 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:37:36,472 - AnalysisService - INFO - 完整数据分析完成
+2026-03-27 10:37:52,536 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:37:57,153 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:37:59,567 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:02,496 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:07,277 - ClassDAO - ERROR - 创建ClassInfo失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:10,262 - DataGeneratorService - INFO - 开始生成50条学生数据
+2026-03-27 10:38:10,268 - DataGeneratorService - INFO - 成功生成50条学生数据
+2026-03-27 10:38:10,300 - StudentDAO - ERROR - 批量创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:13,180 - DataGeneratorService - INFO - 开始生成20条学生数据
+2026-03-27 10:38:13,181 - DataGeneratorService - INFO - 成功生成20条学生数据
+2026-03-27 10:38:13,198 - StudentDAO - ERROR - 批量创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:16,278 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:38:19,170 - StudentDAO - ERROR - 创建Student失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:40:06,448 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:40:06,792 - DataGeneratorService - INFO - 开始生成50条学生数据
+2026-03-27 10:40:06,795 - DataGeneratorService - INFO - 成功生成50条学生数据
+2026-03-27 10:40:06,903 - HeightVisualizer - INFO - 开始生成所有图表
+2026-03-27 10:40:07,698 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/height_by_grade.png
+2026-03-27 10:40:08,759 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/height_by_gender.png
+2026-03-27 10:40:09,544 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/height_distribution.png
+2026-03-27 10:40:10,198 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/boxplot_by_grade.png
+2026-03-27 10:40:11,390 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/growth_trend.png
+2026-03-27 10:40:12,703 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/bmi_distribution.png
+2026-03-27 10:40:13,847 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/height_heatmap.png
+2026-03-27 10:40:14,752 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_full_pipeline0/output/scatter_age_height.png
+2026-03-27 10:40:14,752 - HeightVisualizer - INFO - 成功生成 8 个图表
+2026-03-27 10:40:14,787 - DataGeneratorService - INFO - 开始生成20条学生数据
+2026-03-27 10:40:14,789 - DataGeneratorService - INFO - 成功生成20条学生数据
+2026-03-27 10:40:14,825 - DataGeneratorService - INFO - 导出数据到Excel: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_data_import_export0/export.xlsx
+2026-03-27 10:40:14,989 - DataGeneratorService - INFO - 成功导出20条记录到: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-3/test_data_import_export0/export.xlsx
+2026-03-27 10:40:28,766 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:40:29,026 - DataGeneratorService - INFO - 开始生成50条学生数据
+2026-03-27 10:40:29,029 - DataGeneratorService - INFO - 成功生成50条学生数据
+2026-03-27 10:40:29,123 - HeightVisualizer - INFO - 开始生成所有图表
+2026-03-27 10:40:29,879 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/height_by_grade.png
+2026-03-27 10:40:30,777 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/height_by_gender.png
+2026-03-27 10:40:31,476 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/height_distribution.png
+2026-03-27 10:40:32,290 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/boxplot_by_grade.png
+2026-03-27 10:40:33,055 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/growth_trend.png
+2026-03-27 10:40:34,262 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/bmi_distribution.png
+2026-03-27 10:40:35,300 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/height_heatmap.png
+2026-03-27 10:40:36,119 - HeightVisualizer - INFO - 生成图表: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_full_pipeline0/output/scatter_age_height.png
+2026-03-27 10:40:36,119 - HeightVisualizer - INFO - 成功生成 8 个图表
+2026-03-27 10:40:36,157 - DataGeneratorService - INFO - 开始生成20条学生数据
+2026-03-27 10:40:36,158 - DataGeneratorService - INFO - 成功生成20条学生数据
+2026-03-27 10:40:36,199 - DataGeneratorService - INFO - 导出数据到Excel: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_data_import_export0/export.xlsx
+2026-03-27 10:40:36,316 - DataGeneratorService - INFO - 成功导出20条记录到: /private/var/folders/hz/9p1178652837lmrz8flq_rx40000gn/T/pytest-of-zhangyuqing/pytest-4/test_data_import_export0/export.xlsx
+2026-03-27 10:40:37,391 - LoggingObserver - INFO - 数据变更: Student ID=1 操作=CREATE 来源=Test
+2026-03-27 10:40:37,425 - DataGeneratorService - INFO - 开始生成10条学生数据
+2026-03-27 10:40:37,426 - DataGeneratorService - INFO - 成功生成10条学生数据
+2026-03-27 10:40:37,728 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:40:37,794 - AnalysisService - INFO - 完整数据分析完成
+2026-03-27 10:45:53,696 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:45:53,720 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:45:53,814 - DatabaseManager - ERROR - 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:45:53,814 - __main__ - ERROR - 数据库初始化失败: [DB_CREATE_TABLES_ERROR] 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:45:53,814 - __main__ - ERROR - 应用错误: [DB_CREATE_TABLES_ERROR] 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:47:02,132 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:47:02,189 - DatabaseManager - INFO - 数据库连接已初始化: sqlite
+2026-03-27 10:47:02,279 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:47:02,280 - __main__ - INFO - 数据库初始化完成
+2026-03-27 10:47:02,281 - __main__ - INFO - 开始生成1000条模拟数据...
+2026-03-27 10:47:02,281 - DataGeneratorService - INFO - 开始生成1000条学生数据
+2026-03-27 10:47:02,334 - DataGeneratorService - INFO - 成功生成1000条学生数据
+2026-03-27 10:47:06,464 - LoggingObserver - INFO - 数据变更: Student ID=None 操作=BATCH_CREATE 来源=StudentDAO
+2026-03-27 10:47:06,467 - __main__ - INFO - 成功生成并导入1000条数据
+2026-03-27 10:47:06,482 - __main__ - INFO - 开始数据分析...
+2026-03-27 10:47:06,482 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:47:07,095 - AnalysisService - INFO - 完整数据分析完成
+2026-03-27 10:47:07,097 - __main__ - INFO - 数据分析完成
+2026-03-27 10:47:07,100 - __main__ - INFO - 开始生成可视化图表...
+2026-03-27 10:47:07,111 - HeightVisualizer - INFO - 开始生成所有图表
+2026-03-27 10:47:09,131 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_grade.png
+2026-03-27 10:47:11,283 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_gender.png
+2026-03-27 10:47:14,195 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_distribution.png
+2026-03-27 10:47:17,554 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/boxplot_by_grade.png
+2026-03-27 10:47:21,850 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/growth_trend.png
+2026-03-27 10:47:24,804 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/bmi_distribution.png
+2026-03-27 10:47:27,765 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_heatmap.png
+2026-03-27 10:47:29,562 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/scatter_age_height.png
+2026-03-27 10:47:29,567 - HeightVisualizer - INFO - 成功生成 8 个图表
+2026-03-27 10:47:29,568 - __main__ - INFO - 成功生成8个图表
+2026-03-27 10:48:08,271 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:48:08,296 - DatabaseManager - INFO - 数据库连接已初始化: postgresql
+2026-03-27 10:48:08,403 - DatabaseManager - ERROR - 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:48:08,403 - __main__ - ERROR - 数据库初始化失败: [DB_CREATE_TABLES_ERROR] 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:48:08,404 - __main__ - ERROR - 应用错误: [DB_CREATE_TABLES_ERROR] 创建表失败: (psycopg2.OperationalError) connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-03-27 10:48:37,282 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:48:37,298 - DatabaseManager - INFO - 数据库连接已初始化: sqlite
+2026-03-27 10:48:37,302 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:48:37,302 - __main__ - INFO - 数据库初始化完成
+2026-03-27 10:48:37,302 - __main__ - INFO - 开始生成1000条模拟数据...
+2026-03-27 10:48:37,302 - DataGeneratorService - INFO - 开始生成1000条学生数据
+2026-03-27 10:48:37,322 - DataGeneratorService - INFO - 成功生成1000条学生数据
+2026-03-27 10:48:37,534 - StudentDAO - ERROR - 批量创建Student失败: (sqlite3.IntegrityError) UNIQUE constraint failed: students.student_id
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202410001', '胡浩', '男', '六年级', 12, 150.5, 38.0, 16.78, '正常', None, '2019-09-13')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2026-03-27 10:48:37,535 - __main__ - ERROR - 应用错误: [BATCH_CREATE_ERROR] 批量创建Student失败: (sqlite3.IntegrityError) UNIQUE constraint failed: students.student_id
+[SQL: INSERT INTO students (student_id, name, gender, grade, age, height, weight, bmi, bmi_category, class_id, enrollment_date, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP) RETURNING id, created_at, updated_at]
+[parameters: ('STU202410001', '胡浩', '男', '六年级', 12, 150.5, 38.0, 16.78, '正常', None, '2019-09-13')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj) - Details: {'count': 1000}
+2026-03-27 10:49:21,571 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:49:21,602 - DatabaseManager - INFO - 数据库连接已初始化: sqlite
+2026-03-27 10:49:21,676 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:49:21,677 - __main__ - INFO - 数据库初始化完成
+2026-03-27 10:49:21,677 - __main__ - INFO - 开始生成1000条模拟数据...
+2026-03-27 10:49:21,677 - DataGeneratorService - INFO - 开始生成1000条学生数据
+2026-03-27 10:49:21,700 - DataGeneratorService - INFO - 成功生成1000条学生数据
+2026-03-27 10:49:23,256 - LoggingObserver - INFO - 数据变更: Student ID=None 操作=BATCH_CREATE 来源=StudentDAO
+2026-03-27 10:49:23,257 - __main__ - INFO - 成功生成并导入1000条数据
+2026-03-27 10:49:23,259 - __main__ - INFO - 开始数据分析...
+2026-03-27 10:49:23,259 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:49:23,442 - AnalysisService - INFO - 完整数据分析完成
+2026-03-27 10:49:23,443 - __main__ - INFO - 数据分析完成
+2026-03-27 10:49:23,443 - __main__ - INFO - 开始生成可视化图表...
+2026-03-27 10:49:23,444 - HeightVisualizer - INFO - 开始生成所有图表
+2026-03-27 10:49:24,154 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_grade.png
+2026-03-27 10:49:24,937 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_gender.png
+2026-03-27 10:49:25,596 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_distribution.png
+2026-03-27 10:49:26,265 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/boxplot_by_grade.png
+2026-03-27 10:49:27,001 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/growth_trend.png
+2026-03-27 10:49:28,248 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/bmi_distribution.png
+2026-03-27 10:49:29,414 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_heatmap.png
+2026-03-27 10:49:30,253 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/scatter_age_height.png
+2026-03-27 10:49:30,257 - HeightVisualizer - INFO - 成功生成 8 个图表
+2026-03-27 10:49:30,257 - __main__ - INFO - 成功生成8个图表
+2026-03-27 10:50:24,271 - __main__ - INFO - 初始化数据库...
+2026-03-27 10:50:24,288 - DatabaseManager - INFO - 数据库连接已初始化: sqlite
+2026-03-27 10:50:24,348 - DatabaseManager - INFO - 数据库表创建成功
+2026-03-27 10:50:24,349 - __main__ - INFO - 数据库初始化完成
+2026-03-27 10:50:24,349 - __main__ - INFO - 开始生成1000条模拟数据...
+2026-03-27 10:50:24,349 - DataGeneratorService - INFO - 开始生成1000条学生数据
+2026-03-27 10:50:24,370 - DataGeneratorService - INFO - 成功生成1000条学生数据
+2026-03-27 10:50:25,610 - LoggingObserver - INFO - 数据变更: Student ID=None 操作=BATCH_CREATE 来源=StudentDAO
+2026-03-27 10:50:25,612 - __main__ - INFO - 成功生成并导入1000条数据
+2026-03-27 10:50:25,615 - __main__ - INFO - 开始数据分析...
+2026-03-27 10:50:25,615 - AnalysisService - INFO - 开始完整数据分析
+2026-03-27 10:50:25,997 - AnalysisService - INFO - 完整数据分析完成
+2026-03-27 10:50:25,998 - __main__ - INFO - 数据分析完成
+2026-03-27 10:50:25,999 - __main__ - INFO - 开始生成可视化图表...
+2026-03-27 10:50:26,000 - HeightVisualizer - INFO - 开始生成所有图表
+2026-03-27 10:50:27,350 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_grade.png
+2026-03-27 10:50:29,555 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_by_gender.png
+2026-03-27 10:50:30,965 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_distribution.png
+2026-03-27 10:50:32,603 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/boxplot_by_grade.png
+2026-03-27 10:50:34,056 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/growth_trend.png
+2026-03-27 10:50:35,611 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/bmi_distribution.png
+2026-03-27 10:50:37,807 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/height_heatmap.png
+2026-03-27 10:50:38,987 - HeightVisualizer - INFO - 生成图表: /Users/zhangyuqing/Desktop/treacn-2026-03-26-dataview/student_height_analysis_refactored/output/scatter_age_height.png
+2026-03-27 10:50:38,989 - HeightVisualizer - INFO - 成功生成 8 个图表
+2026-03-27 10:50:38,991 - __main__ - INFO - 成功生成8个图表
