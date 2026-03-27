@@ -1,55 +1,108 @@
+"""
+Student height data analysis module.
+
+This module provides the StudentHeightAnalyzer class for analyzing
+student height data from Excel files or databases.
+
+Note: This is a legacy module maintained for backward compatibility.
+For new development, please use the app.service module instead.
+"""
+
 import pandas as pd
 import numpy as np
+import warnings
+
+# Import new architecture for compatibility
+try:
+    from app.service import StudentService
+    from app.config.database import get_db_pool
+    NEW_ARCHITECTURE_AVAILABLE = True
+except ImportError:
+    NEW_ARCHITECTURE_AVAILABLE = False
 
 
 class StudentHeightAnalyzer:
-    """小学生身高数据分析类"""
+    """
+    Student height data analyzer class.
 
-    def __init__(self, data_path):
-        """
-        初始化分析器
+    This class provides methods for analyzing student height data,
+    supporting both Excel files and database sources.
 
-        参数:
-            data_path: Excel数据文件路径
+    Attributes:
+        df (pandas.DataFrame): The student data
+        results (dict): Dictionary to store analysis results
+
+    Note: For new development, use app.service.StudentService instead.
+    """
+
+    def __init__(self, data_path=None, use_database=False):
         """
-        self.df = pd.read_excel(data_path)
+        Initialize the analyzer with a data source.
+
+        Args:
+            data_path: Path to Excel data file (for file-based mode)
+            use_database: Whether to use the database for data access
+        """
         self.results = {}
+        self._use_database = use_database
+        self._student_service = None
+
+        if use_database and NEW_ARCHITECTURE_AVAILABLE:
+            self._init_from_database()
+        elif data_path:
+            self.df = pd.read_excel(data_path)
+        else:
+            raise ValueError("Either data_path or use_database=True must be provided")
+
+    def _init_from_database(self):
+        """Initialize data from the database using the new architecture."""
+        if not NEW_ARCHITECTURE_AVAILABLE:
+            raise ImportError("New architecture modules not available")
+
+        pool = get_db_pool()
+        session = pool.get_session()
+        self._student_service = StudentService(session)
+        self.df = self._student_service.get_students_dataframe()
 
     def basic_statistics(self):
         """
-        基础统计分析
+        Calculate basic statistics.
 
-        返回:
-            dict: 包含各项统计指标的字典
+        Returns:
+            dict: Dictionary containing basic statistical metrics
         """
         stats = {
             '总人数': len(self.df),
-            '男生人数': len(self.df[self.df['性别'] == '男']),
-            '女生人数': len(self.df[self.df['性别'] == '女']),
-            '平均身高': round(self.df['身高(cm)'].mean(), 2),
-            '身高标准差': round(self.df['身高(cm)'].std(), 2),
-            '身高最小值': self.df['身高(cm)'].min(),
-            '身高最大值': self.df['身高(cm)'].max(),
-            '身高中位数': self.df['身高(cm)'].median(),
+            '男生人数': len(self.df[self.df['gender'] == '男']) if 'gender' in self.df.columns else len(self.df[self.df['性别'] == '男']),
+            '女生人数': len(self.df[self.df['gender'] == '女']) if 'gender' in self.df.columns else len(self.df[self.df['性别'] == '女']),
+            '平均身高': round(self.df['height_cm'].mean(), 2) if 'height_cm' in self.df.columns else round(self.df['身高(cm)'].mean(), 2),
+            '身高标准差': round(self.df['height_cm'].std(), 2) if 'height_cm' in self.df.columns else round(self.df['身高(cm)'].std(), 2),
+            '身高最小值': self.df['height_cm'].min() if 'height_cm' in self.df.columns else self.df['身高(cm)'].min(),
+            '身高最大值': self.df['height_cm'].max() if 'height_cm' in self.df.columns else self.df['身高(cm)'].max(),
+            '身高中位数': self.df['height_cm'].median() if 'height_cm' in self.df.columns else self.df['身高(cm)'].median(),
         }
         self.results['basic'] = stats
         return stats
 
     def grade_statistics(self):
         """
-        按年级统计
+        Calculate statistics by grade.
 
-        返回:
-            DataFrame: 各年级的统计信息
+        Returns:
+            pandas.DataFrame: Statistics by grade
         """
-        grade_stats = self.df.groupby('年级').agg({
-            '身高(cm)': ['count', 'mean', 'std', 'min', 'max'],
-            '体重(kg)': ['mean', 'std']
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+        weight_col = 'weight_kg' if 'weight_kg' in self.df.columns else '体重(kg)'
+
+        grade_stats = self.df.groupby(grade_col).agg({
+            height_col: ['count', 'mean', 'std', 'min', 'max'],
+            weight_col: ['mean', 'std']
         }).round(2)
 
         grade_stats.columns = ['人数', '平均身高', '身高标准差', '最矮身高', '最高身高', '平均体重', '体重标准差']
 
-        # 按年级顺序排序
+        # Sort by grade order
         grade_order = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
         grade_stats = grade_stats.reindex(grade_order)
 
@@ -58,12 +111,16 @@ class StudentHeightAnalyzer:
 
     def gender_statistics(self):
         """
-        按性别统计
+        Calculate statistics by gender.
 
-        返回:
-            DataFrame: 按性别和年级的统计信息
+        Returns:
+            pandas.DataFrame: Statistics by gender and grade
         """
-        gender_stats = self.df.groupby(['年级', '性别'])['身高(cm)'].agg(['count', 'mean', 'std']).round(2)
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+        gender_col = 'gender' if 'gender' in self.df.columns else '性别'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
+        gender_stats = self.df.groupby([grade_col, gender_col])[height_col].agg(['count', 'mean', 'std']).round(2)
         gender_stats.columns = ['人数', '平均身高', '标准差']
 
         self.results['by_gender'] = gender_stats
@@ -71,12 +128,15 @@ class StudentHeightAnalyzer:
 
     def age_statistics(self):
         """
-        按年龄统计
+        Calculate statistics by age.
 
-        返回:
-            DataFrame: 各年龄的统计信息
+        Returns:
+            pandas.DataFrame: Statistics by age
         """
-        age_stats = self.df.groupby('年龄')['身高(cm)'].agg(['count', 'mean', 'std', 'min', 'max']).round(2)
+        age_col = 'age' if 'age' in self.df.columns else '年龄'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
+        age_stats = self.df.groupby(age_col)[height_col].agg(['count', 'mean', 'std', 'min', 'max']).round(2)
         age_stats.columns = ['人数', '平均身高', '标准差', '最矮身高', '最高身高']
 
         self.results['by_age'] = age_stats
@@ -84,15 +144,17 @@ class StudentHeightAnalyzer:
 
     def height_distribution(self):
         """
-        身高分布统计
+        Calculate height distribution.
 
-        返回:
-            dict: 各身高段的人数分布
+        Returns:
+            dict: Distribution of students by height ranges
         """
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
         bins = [0, 110, 120, 130, 140, 150, 160, 200]
         labels = ['<110cm', '110-120cm', '120-130cm', '130-140cm', '140-150cm', '150-160cm', '>160cm']
 
-        self.df['身高段'] = pd.cut(self.df['身高(cm)'], bins=bins, labels=labels, right=False)
+        self.df['身高段'] = pd.cut(self.df[height_col], bins=bins, labels=labels, right=False)
         distribution = self.df['身高段'].value_counts().sort_index().to_dict()
 
         self.results['height_distribution'] = distribution
@@ -100,13 +162,16 @@ class StudentHeightAnalyzer:
 
     def growth_analysis(self):
         """
-        生长趋势分析
+        Analyze growth trends between grades.
 
-        返回:
-            DataFrame: 相邻年级的身高增长情况
+        Returns:
+            pandas.DataFrame: Height growth between consecutive grades
         """
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
         grade_order = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
-        grade_means = self.df.groupby('年级')['身高(cm)'].mean()
+        grade_means = self.df.groupby(grade_col)[height_col].mean()
         grade_means = grade_means.reindex(grade_order)
 
         growth_data = []
@@ -126,16 +191,19 @@ class StudentHeightAnalyzer:
 
     def percentile_analysis(self):
         """
-        身高百分位数分析
+        Calculate height percentiles by grade.
 
-        返回:
-            DataFrame: 各年级的身高百分位数
+        Returns:
+            pandas.DataFrame: Height percentiles by grade
         """
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
         percentiles = [3, 10, 25, 50, 75, 90, 97]
 
         percentile_data = []
         for grade in ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']:
-            grade_data = self.df[self.df['年级'] == grade]['身高(cm)']
+            grade_data = self.df[self.df[grade_col] == grade][height_col]
             row = {'年级': grade}
             for p in percentiles:
                 row[f'P{p}'] = round(np.percentile(grade_data, p), 1)
@@ -147,16 +215,21 @@ class StudentHeightAnalyzer:
 
     def bmi_analysis(self):
         """
-        BMI分析
+        Analyze BMI distribution.
 
-        返回:
-            DataFrame: BMI分布统计
+        Returns:
+            tuple: (bmi_distribution, bmi_by_grade)
         """
-        # 计算BMI
-        self.df['BMI'] = self.df['体重(kg)'] / (self.df['身高(cm)'] / 100) ** 2
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+        weight_col = 'weight_kg' if 'weight_kg' in self.df.columns else '体重(kg)'
+        age_col = 'age' if 'age' in self.df.columns else '年龄'
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+
+        # Calculate BMI
+        self.df['BMI'] = self.df[weight_col] / (self.df[height_col] / 100) ** 2
         self.df['BMI'] = self.df['BMI'].round(2)
 
-        # BMI分类（儿童标准）
+        # BMI classification (child standards)
         def classify_bmi(bmi, age):
             if bmi < 14:
                 return '偏瘦'
@@ -167,12 +240,12 @@ class StudentHeightAnalyzer:
             else:
                 return '肥胖'
 
-        self.df['BMI分类'] = self.df.apply(lambda x: classify_bmi(x['BMI'], x['年龄']), axis=1)
+        self.df['BMI分类'] = self.df.apply(lambda x: classify_bmi(x['BMI'], x[age_col]), axis=1)
 
         bmi_dist = self.df['BMI分类'].value_counts().to_dict()
-        bmi_by_grade = pd.crosstab(self.df['年级'], self.df['BMI分类'])
+        bmi_by_grade = pd.crosstab(self.df[grade_col], self.df['BMI分类'])
 
-        # 按年级顺序排序
+        # Sort by grade order
         grade_order = ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
         bmi_by_grade = bmi_by_grade.reindex(grade_order)
 
@@ -183,12 +256,16 @@ class StudentHeightAnalyzer:
 
     def compare_with_standard(self):
         """
-        与标准身高对比
+        Compare actual heights with standard heights.
 
-        返回:
-            DataFrame: 各年级与标准身高的对比
+        Returns:
+            pandas.DataFrame: Comparison with standard heights
         """
-        # 中国儿童身高标准（2023年）
+        grade_col = 'grade' if 'grade' in self.df.columns else '年级'
+        gender_col = 'gender' if 'gender' in self.df.columns else '性别'
+        height_col = 'height_cm' if 'height_cm' in self.df.columns else '身高(cm)'
+
+        # Chinese children height standards (2023)
         standard_heights = {
             '一年级': {'男': 120.0, '女': 119.0},
             '二年级': {'男': 125.0, '女': 124.0},
@@ -201,7 +278,7 @@ class StudentHeightAnalyzer:
         comparison_data = []
         for grade in ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']:
             for gender in ['男', '女']:
-                actual_mean = self.df[(self.df['年级'] == grade) & (self.df['性别'] == gender)]['身高(cm)'].mean()
+                actual_mean = self.df[(self.df[grade_col] == grade) & (self.df[gender_col] == gender)][height_col].mean()
                 standard = standard_heights[grade][gender]
                 diff = actual_mean - standard
 
@@ -219,12 +296,7 @@ class StudentHeightAnalyzer:
         return comparison_df
 
     def run_all_analysis(self):
-        """
-        运行所有分析
-
-        返回:
-            dict: 所有分析结果
-        """
+        """Run all available analyses and print results."""
         print("=" * 60)
         print("小学生身高数据分析报告")
         print("=" * 60)
@@ -279,6 +351,6 @@ class StudentHeightAnalyzer:
 
 
 if __name__ == "__main__":
-    # 测试分析功能
+    # Test the analyzer
     analyzer = StudentHeightAnalyzer("../data/student_height_data.xlsx")
     analyzer.run_all_analysis()
